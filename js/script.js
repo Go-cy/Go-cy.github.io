@@ -241,6 +241,7 @@ function fallbackCopy(text, message) {
     textArea.select();
     
     try {
+        // Note: document.execCommand('copy') is deprecated but used as fallback for older browsers
         document.execCommand('copy');
         showNotification(message);
     } catch (err) {
@@ -275,7 +276,9 @@ function showNotification(message) {
     
     // Remove notification after 2 seconds
     setTimeout(function() {
-        document.body.removeChild(notification);
+        if (notification && notification.parentNode) {
+            document.body.removeChild(notification);
+        }
     }, 2000);
 }
 

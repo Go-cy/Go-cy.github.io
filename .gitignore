@@ -52,3 +52,24 @@ _zip
 
 /assets/js/*hydejack-*
 /_sass/*/__*__/*
+
+# Old Jekyll theme files (no longer used)
+_config.yml
+_data/
+_featured_categories/
+_includes/
+_sass/
+about.md
+assets/
+docs/
+example/
+licenses/
+netlify.toml
+posts.md
+workers-site/
+wrangler.toml
+404.md
+CHANGELOG.md
+Gemfile
+NOTICE.md
+.bundle/
